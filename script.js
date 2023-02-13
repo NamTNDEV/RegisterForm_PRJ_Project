@@ -3,6 +3,30 @@ const username = document.getElementById('username')
 const email = document.getElementById('email')
 const password = document.getElementById('password')
 const password2 = document.getElementById('confirmPassword')
+const phone = document.getElementById('phone')
+const address = document.getElementById('address')
+const togglePassword1 = document.querySelector('#togglePassword1');
+const togglePassword2 = document.querySelector('#togglePassword2');
+const passwordShow = document.querySelector('#password');
+const confirmPassword = document.querySelector('#confirmPassword');
+
+//Show password 
+togglePassword1.addEventListener('click', function (e) {
+    // toggle the type attribute
+    const type = password.getAttribute('type') === 'password' ? 'text' : 'password';
+    password.setAttribute('type', type);
+    // toggle the eye / eye slash icon
+    this.classList.toggle('fa-eye');
+});  
+
+//Show confirmPassword 
+togglePassword2.addEventListener('click', function (e) {
+    // toggle the type attribute
+    const type = confirmPassword.getAttribute('type') === 'password' ? 'text' : 'password';
+    confirmPassword.setAttribute('type', type);
+    // toggle the eye / eye slash icon
+    this.classList.toggle('fa-eye');
+});
 
 // Show input error message
 function showError(input, message) {
@@ -80,7 +104,7 @@ function getFieldName(input) {
 form.addEventListener('submit', function (e) {
 	e.preventDefault()
 
-	if (!checkRequired([username, email, password, password2])) {
+	if (!checkRequired([username, email, phone, address, password, password2])) {
 		checkLength(username, 3, 15)
 		checkLength(password, 6, 25)
 		checkEmail(email)

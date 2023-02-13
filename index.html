@@ -1,15 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<title>Register Page</title>
-		<link rel="stylesheet" href="style.css" />
-	</head>
-	<body>
-		<div class="container">
-			<h1>Registration</h1>
-			<form>
+
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title>Register Page</title>
+	<link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+	<div class="container">
+		<h1>Registration</h1>
+		<form>
+			<div class="form_details">
 				<div class="form-control">
 					<i class="fa-regular fa-user"></i>
 					<input type="text" id="username" placeholder="Username" />
@@ -23,27 +26,42 @@
 					<small></small>
 				</div>
 				<div class="form-control">
-					<i class="fa-solid fa-lock"></i>
-					<input type="password" id="password" placeholder="Password" />
+					<i class="fa-solid fa-phone"></i>
+					<input type="tel" id="phone" placeholder="Phone" pattern="(((\+|)84)|0)(3|5|7|8|9)+([0-9]{8})\b"/>
+					<span></span>
+					<small></small>
+				</div>
+				<div class="form-control">
+					<i class="fa-regular fa-address-card"></i>
+					<input type="text" id="address" placeholder="Address" />
 					<span></span>
 					<small></small>
 				</div>
 				<div class="form-control">
 					<i class="fa-solid fa-lock"></i>
-					<input
-						type="password"
-						id="confirmPassword"
-						placeholder="Confirm password"
-					/>
+					<input type="password" id="password" placeholder="Password" />
+					<i class="fa-regular fa-eye-slash" id="togglePassword1"></i>
 					<span></span>
 					<small></small>
 				</div>
+				<div class="form-control">
+					<i class="fa-solid fa-lock"></i>
+					<input type="password" id="confirmPassword" placeholder="Confirm password" />
+					<i class="fa-regular fa-eye-slash" id="togglePassword2"></i>
+					<span></span>
+					<small></small>
+				</div>
+			</div>
+			<!-- </div> -->
+			<div class="form_footer">
 				<input type="submit" value="Register" />
-				<div class="signup_link">Already on LinkedIn ? <a href="#">Sign in</a></div>
-			</form>
-		</div>
+				<div class="signup_link">Already on G3S ? <a href="#">Sign in</a></div>
+			</div>
+		</form>
+	</div>
 
-		<script src="script.js"></script>
-		<script src="https://kit.fontawesome.com/10fdb3b039.js" crossorigin="anonymous"></script>
-	</body>
+	<script src="script.js"></script>
+	<script src="https://kit.fontawesome.com/10fdb3b039.js" crossorigin="anonymous"></script>
+</body>
+
 </html>

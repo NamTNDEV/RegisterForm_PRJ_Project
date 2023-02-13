@@ -18,10 +18,17 @@ body {
 	top: 50%;
 	left: 50%;
 	transform: translate(-50%, -50%);
-	width: 400px;
+	max-width: 700px;
+	width: 100%;
 	background: white;
 	border-radius: 10px;
 	box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.05);
+}
+
+.form_details{
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
 }
 
 .container h1 {
@@ -36,7 +43,8 @@ body {
 form .form-control {
 	position: relative;
 	border-bottom: 2px solid #adadad;
-	margin: 40px 0;
+	margin: 20px 0 12px 0;
+	width: calc(100% / 2 - 20px);
 }
 
 .form-control.success {
@@ -54,6 +62,14 @@ form .form-control {
 	border: none;
 	background: none;
 	outline: none;
+}
+
+#password, #confirmPassword{
+	width: 80%;
+}
+
+#togglePassword1, #togglePassword2{
+	cursor: pointer;
 }
 
 small {
